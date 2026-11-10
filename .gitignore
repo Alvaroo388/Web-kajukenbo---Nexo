@@ -1,0 +1,14 @@
+# Node / tooling
+node_modules/
+output/
+coverage/
+npm-debug.log*
+
+# Sistema operativo
+Thumbs.db
+.DS_Store
+
+# Artefactos de build (el stack definitivo lo añade el flujo al instanciar)
+dist/
+build/
+.cache/

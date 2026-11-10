@@ -1,0 +1,13 @@
+{
+  "name": "kajukenbo-de-mingo-alovera",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Frontend de Kajukenbo de Mingo en Alovera, preparado con el flujo Nexo v4.4.1.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}
+

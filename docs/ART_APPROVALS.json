@@ -1,0 +1,31 @@
+{
+  "__comment__": "Copiar a docs/ART_APPROVALS.json al instanciar. Registrar cada respuesta humana real en su pausa; approved:false y authorizes_implementation:false no conceden permisos. Calcular artifact_sha256 sobre el archivo aprobado, sin inventar evidencia.",
+  "schema_version": 2,
+  "project_id": "kajukenbo-de-mingo-alovera",
+  "base_design": {
+    "approved": false,
+    "approved_by": null,
+    "approved_at": null,
+    "evidence": null,
+    "artifact_path": "docs/DESIGN_BASE.md",
+    "artifact_sha256": null
+  },
+  "hero_selection": {
+    "approved": false,
+    "approved_by": null,
+    "approved_at": null,
+    "evidence": null,
+    "artifact_path": "docs/ART_DIRECTIONS.md",
+    "artifact_sha256": null
+  },
+  "final_hero": {
+    "approved": false,
+    "approved_by": null,
+    "approved_at": null,
+    "evidence": null,
+    "artifact_path": null,
+    "artifact_sha256": null,
+    "authorizes_implementation": false
+  }
+}
+

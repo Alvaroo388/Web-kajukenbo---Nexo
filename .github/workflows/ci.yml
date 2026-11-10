@@ -1,0 +1,32 @@
+name: ci
+
+# CI del proyecto (starter). Valida estructura del esqueleto y tests.
+# El workflow de la metodologia vive en el repositorio de metodologia; este
+# workflow pertenece al proyecto instanciado.
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # El starter es sin dependencias: npm install solo prepara el entorno
+      # (y fallaria si alguien hubiera metido dependencias no declaradas).
+      - name: Install
+        run: npm install
+
+      - name: Smoke tests
+        run: npm test
