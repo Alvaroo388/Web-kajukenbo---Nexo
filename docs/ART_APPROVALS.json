@@ -1,14 +1,14 @@
 {
-  "__comment__": "Copiar a docs/ART_APPROVALS.json al instanciar. Registrar cada respuesta humana real en su pausa; approved:false y authorizes_implementation:false no conceden permisos. Calcular artifact_sha256 sobre el archivo aprobado, sin inventar evidencia.",
+  "__comment__": "Expediente del proyecto. Registrar solo respuestas humanas reales y hashes de los artefactos aprobados.",
   "schema_version": 2,
   "project_id": "kajukenbo-de-mingo-alovera",
   "base_design": {
     "approved": true,
     "approved_by": "usuario del proyecto",
-    "approved_at": "2026-11-10T22:22:58+01:00",
-    "evidence": "Respuesta expresa en este chat el 2026-11-10: «Confirmo el diseño base» a la pregunta sobre docs/DESIGN_BASE.md.",
+    "approved_at": "2026-11-10T22:51:25+01:00",
+    "evidence": "El usuario confirmó el diseño base en este chat el 2026-11-10 y después ordenó expresamente rehacer las tres opciones con personalidad, tipografías distintas y símbolos chinos; docs/DESIGN_BASE.md registra la ampliación.",
     "artifact_path": "docs/DESIGN_BASE.md",
-    "artifact_sha256": "41b35687d08ebe8d4bac90efa91e3a14d5fb0e3d5056e5bfe0959c65c09d5b83"
+    "artifact_sha256": "c1d70fcaae51aa8797d68e68ebfd1a7ac74283473f71bb3798de236dc16f3d3d"
   },
   "hero_selection": {
     "approved": false,

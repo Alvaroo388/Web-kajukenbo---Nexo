@@ -1,25 +1,27 @@
-# Tres direcciones artísticas · Kajukenbo de Mingo
+# Tres direcciones artísticas · segunda presentación
 
-Estado: `EN_REVISIÓN` · Pausa 2 de Nexo. El diseño base fue confirmado por el usuario el 2026-11-10. Se presentan exactamente tres imágenes estáticas de hero; ninguna es una página implementada ni demuestra el movimiento final. Selección humana pendiente.
+Estado: `EN_REVISIÓN` · Pausa 2 de Nexo. El usuario rechazó la primera serie por genérica y pidió rehacer las tres opciones con personalidad, tipografías distintas y símbolos chinos. Esta serie la sustituye; las imágenes anteriores permanecen solo en el historial Git. Ninguna propuesta está elegida ni implementada.
 
-| ID | Dirección e imagen | Composición y jerarquía | Ventaja | Riesgo a controlar |
-|---|---|---|---|---|
-| A | **Corte / dojo** · [`option-a.svg`](art/option-a.svg) | Fondo negro, letras KA/JU/KEN/BO apiladas y monumentales a la izquierda; fotografía del maestro a la derecha; corte rojo diagonal; navegación compacta y CTA rojo sólido. | Hace del nombre el gesto visual protagonista y explica de inmediato la interacción solicitada. | La densidad exige controlar saltos de línea y tamaño de la tarjeta explicativa en móvil. |
-| B | **Crónica / linaje** · [`option-b.svg`](art/option-b.svg) | Apertura editorial a dos páginas: papel cálido con titular serif a la izquierda y fotografía de la escuela a la derecha; línea roja, índice superior y CTA negro. | Favorece el relato histórico y muestra la comunidad real de la escuela. | El uso de fondo claro debe conservar el negro y rojo como identidad global en las secciones restantes. |
-| C | **Emblema / ritual** · [`option-c.svg`](art/option-c.svg) | Negro profundo, columna roja vertical, escudo en marco octagonal, fotografía vertical a la derecha y título horizontal serif. Navegación superior discreta y CTA dorado. | Da protagonismo al escudo y crea un tono sobrio y ceremonial. | La jerarquía del título y la interacción de sílabas requieren especial cuidado en pantallas pequeñas. |
+| ID | Imagen estática | Dirección visual | Tipografía y símbolo | Ventaja | Riesgo a resolver |
+|---|---|---|---|---|---|
+| A · **Golpe** | [`option-a.png`](art/option-a.png) | Cartel de combate: banda roja intensa, retrato aportado por la escuela a sangre, título partido en dos golpes y corte diagonal. | **Agency FB** condensada, enorme y angular; `拳` como carácter de «puño» a escala mural. | El nombre se convierte en la interacción principal: el cuadro de BO ya aparece como muestra. | La fotografía original tiene poca resolución para un recorte grande; habrá que ajustar el tamaño en la web final. |
+| B · **Tinta y linaje** | [`option-b.png`](art/option-b.png) | Papel de entrenamiento sobre fondo negro, foto vertical del grupo, trazo de tinta irregular y sello rojo. | **Brush Script MT** para «Kajukenbo», Book Antiqua para relato; `武術` («artes marciales») y `拳` («puño») como caligrafía y sello. | Deja ver a la comunidad y da forma narrativa a la historia desde Hawái hasta Alovera. | El papel cálido debe equilibrarse con el negro y rojo dominante del resto de la web. |
+| C · **Escudo de escuela** | [`option-c.png`](art/option-c.png) | Póster de dojo casi serigráfico: plano negro, cuña roja, marco octagonal del escudo y las dos fotografías reales. | **Stencil** para rótulos, **Copperplate Gothic** para el nombre; `武` («marcial») y `拳` («puño») en blanco sobre rojo. | Expresa la identidad de la escuela y sus materiales existentes sin depender de una foto hero de gran resolución. | El escudo de Villaseñor todavía falta; su integración deberá respetar el equilibrio de ambos emblemas. |
 
-## Movimiento propuesto, todavía sin implementar
+Las tres opciones comparten los colores aprobados, el escudo de De Mingo y el mismo contenido confirmado, pero cambian de forma sustancial la composición, la escala, la tipografía, el papel de la fotografía y la jerarquía. Los caracteres chinos se usan por su significado visual y lingüístico; **no** se presentan como traducción de «Kajukenbo» ni como inscripción histórica de la escuela. Para `拳`, `武` y `武術` se consultaron las entradas del Ministerio de Educación de Taiwán: [拳](https://dict.concised.moe.edu.tw/dictView.jsp?ID=26091&la=1&powerMode=0), [武](https://dict.concised.moe.edu.tw/dictView.jsp?ID=42954&la=1&powerMode=0) y [武術](https://dict.concised.moe.edu.tw/dictView.jsp?ID=42972).
 
-| ID | Título y respuesta al cursor o foco | Historia al desplazar | Transiciones y objetos | Móvil y movimiento reducido |
-|---|---|---|---|---|
-| A | Cada bloque de sílaba se ilumina en rojo; tarjeta informativa entra con un corte lateral corto. | La cronología avanza como una línea roja segmentada; fotografías y fechas se alternan. | Cortes rápidos y desplazamientos breves, sin 3D ni parallax. | Sílabas en botones táctiles; la tarjeta aparece por toque y foco. Sin desplazamientos automáticos con `prefers-reduced-motion`. |
-| B | El título completo permanece estable; un índice KA/JU/KEN/BO bajo él cambia el contenido de una nota editorial. | La historia se lee como capítulos; una regla roja progresa con el scroll y el índice marca el capítulo actual. | Fundidos discretos de imágenes y pies, sin ocultar el texto hasta que cargue JavaScript. | Columna de texto antes de imagen; índice horizontal desplazable sin recortar contenido. Movimiento reducido sin fundidos ni progreso animado. |
-| C | El título se divide visualmente en cuatro zonas al hover/foco; una ficha aparece debajo del marco del escudo. | Hitos en un eje vertical dorado; el marco octagonal cambia de escala de forma contenida al entrar en cada periodo. | Una transición pausada del escudo y una respuesta precisa de botones. Sin 3D. | Escudo más pequeño seguido del título y fichas táctiles; eje vertical estático con `prefers-reduced-motion`. |
+## Comportamiento que sugiere cada hero
 
-## Fuentes y límites
+| ID | Título, cursor y foco | Flujo de historia | Móvil y movimiento reducido |
+|---|---|---|---|
+| A | Cada sílaba actúa como una pieza contundente. Hover, foco o toque activan una ficha lateral con arte y descripción; el carácter `拳` permanece decorativo. | Hitos como golpes sucesivos sobre una línea roja diagonal que se endereza al entrar en la lectura. | Las sílabas pasan a una retícula de dos por dos; ficha bajo la activa. `prefers-reduced-motion` elimina desplazamientos y deja cambios de estado inmediatos. |
+| B | El nombre sobre el trazo de tinta se segmenta en cuatro áreas de interacción; la explicación se abre como anotación en el papel. | Capítulos como hojas de un cuaderno; línea de tinta y fotografía cambian sin ocultar texto esencial. | Papel y fotografía se suceden en orden de lectura. En movimiento reducido, capítulos estáticos y navegación por anclas. |
+| C | Cuatro sílabas del título activan zonas del marco octagonal y muestran una ficha clara al lado del escudo. | El relato sigue el perímetro del octógono hasta desembocar en una línea vertical hacia Alovera. | Escudo, título y fichas en una columna; los dos retratos se reorganizan sin recorte de personas. En movimiento reducido no gira el marco. |
 
-Las tres imágenes son composiciones SVG originales preparadas para esta decisión. Incluyen `images.jpg`, `maestro.jpg` o `medallas.jpg`, archivos aportados por el usuario; el usuario confirmó el permiso de publicación de las dos fotografías. El escudo de Villaseñor no está disponible y se señala como pendiente. Las fechas y el relato exacto de llegada a Alovera continúan pendientes según `INFO_NEGOCIO.md`. La comparación visual con el registro Nexo está limitada porque `design/registry/visual-history.json` no contiene proyectos previos.
+## Fuentes, derechos y límites
 
-## Decisión humana pendiente
+Las tres imágenes PNG son maquetas estáticas originales compuestas por Codex y rasterizadas localmente con Sharp; usan fotos y escudo aportados por el usuario con permiso de publicación confirmado. La procedencia figura en `docs/ASSETS.md`. El escudo de Villaseñor, la dirección exacta y el relato detallado de llegada a Alovera permanecen pendientes. El registro visual de Nexo no contiene proyectos anteriores, por lo que no permite una comparación histórica de repetición. Las imágenes no demuestran las animaciones descritas.
 
-El usuario debe elegir **A**, **B**, **C**, pedir cambios o describir una fusión. No se generará el hero definitivo hasta recibir esta decisión expresa. La confirmación y el hash de este documento se registrarán en `docs/ART_APPROVALS.json`.
+## Decisión pendiente
+
+El usuario elige **A**, **B**, **C**, solicita ajustes o define una fusión. Solo después de una elección expresa se creará la imagen del hero definitivo. La aprobación de ese hero y la autorización para implementar serán una tercera decisión separada.
