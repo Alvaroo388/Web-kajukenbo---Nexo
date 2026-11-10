@@ -11,12 +11,12 @@
     "artifact_sha256": "c1d70fcaae51aa8797d68e68ebfd1a7ac74283473f71bb3798de236dc16f3d3d"
   },
   "hero_selection": {
-    "approved": false,
-    "approved_by": null,
-    "approved_at": null,
-    "evidence": null,
+    "approved": true,
+    "approved_by": "usuario del proyecto",
+    "approved_at": "2026-11-10T23:17:46+01:00",
+    "evidence": "Respuesta expresa en este chat el 2026-11-10: «LA OPcion a», referida a la segunda serie de tres propuestas de docs/ART_DIRECTIONS.md.",
     "artifact_path": "docs/ART_DIRECTIONS.md",
-    "artifact_sha256": null
+    "artifact_sha256": "df7fbde5ff2255ac8bc042464a758f73bf128d12adbba723e3c0e4156d7cdc8c"
   },
   "final_hero": {
     "approved": false,

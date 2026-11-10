@@ -12,5 +12,6 @@ Estado: `BORRADOR` · 2026-11-10.
 | `docs/art/option-a.png` | Composición original de Codex con `images.jpg` y `maestro.jpg` aportados por el usuario | Exploración visual para pausa 2 | Preparado |
 | `docs/art/option-b.png` | Composición original de Codex con `medallas.jpg` aportado por el usuario | Exploración visual para pausa 2 | Preparado |
 | `docs/art/option-c.png` | Composición original de Codex con `images.jpg`, `maestro.jpg` y `medallas.jpg` aportados por el usuario | Exploración visual para pausa 2 | Preparado |
+| `docs/art/hero-final.png` | Refinamiento original de Codex de `option-a.png`, compuesto y rasterizado localmente con Sharp; incluye escudo y foto aportados por el usuario | Imagen final propuesta para pausa 3; pendiente de aprobación artística | Preparado, no aprobado |
 
 Las maquetas pueden usar los recursos de De Mingo aportados y autorizados por el usuario. No se descargan fotos de prensa ni se reproducen escudos de terceros como recurso final. El escudo de Villaseñor sigue pendiente.

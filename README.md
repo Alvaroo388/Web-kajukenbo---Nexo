@@ -4,7 +4,7 @@ Proyecto frontend de la escuela de Kajukenbo de José Antonio de Mingo en Alover
 
 ## Estado
 
-`EN_CURSO` · Preparación artística. El diseño base quedó confirmado el 2026-11-10. La metodología Nexo v4.4.1 exige ahora elegir una de [tres direcciones visuales](docs/ART_DIRECTIONS.md) y después aprobar el hero final con autorización de implementación. Estas dos decisiones permanecen pendientes en `docs/ART_APPROVALS.json`.
+`EN_CURSO` · Preparación artística. El diseño base quedó confirmado el 2026-11-10 y el usuario eligió la opción A de [tres direcciones visuales](docs/ART_DIRECTIONS.md). Está preparado el [hero final propuesto](docs/FINAL_HERO.md); faltan su aprobación expresa y la autorización de implementación en `docs/ART_APPROVALS.json`.
 
 ## Alcance aprobado
 

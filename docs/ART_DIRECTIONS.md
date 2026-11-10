@@ -1,6 +1,6 @@
 # Tres direcciones artísticas · segunda presentación
 
-Estado: `EN_REVISIÓN` · Pausa 2 de Nexo. El usuario rechazó la primera serie por genérica y pidió rehacer las tres opciones con personalidad, tipografías distintas y símbolos chinos. Esta serie la sustituye; las imágenes anteriores permanecen solo en el historial Git. Ninguna propuesta está elegida ni implementada.
+Estado: `APROBADO` · Pausa 2 de Nexo. El usuario rechazó la primera serie por genérica y pidió rehacer las tres opciones con personalidad, tipografías distintas y símbolos chinos. Esta serie la sustituye; las imágenes anteriores permanecen solo en el historial Git. El usuario eligió la opción A; todavía no hay hero final aprobado ni frontend implementado.
 
 | ID | Imagen estática | Dirección visual | Tipografía y símbolo | Ventaja | Riesgo a resolver |
 |---|---|---|---|---|---|
@@ -22,6 +22,6 @@ Las tres opciones comparten los colores aprobados, el escudo de De Mingo y el mi
 
 Las tres imágenes PNG son maquetas estáticas originales compuestas por Codex y rasterizadas localmente con Sharp; usan fotos y escudo aportados por el usuario con permiso de publicación confirmado. La procedencia figura en `docs/ASSETS.md`. El escudo de Villaseñor, la dirección exacta y el relato detallado de llegada a Alovera permanecen pendientes. El registro visual de Nexo no contiene proyectos anteriores, por lo que no permite una comparación histórica de repetición. Las imágenes no demuestran las animaciones descritas.
 
-## Decisión pendiente
+## Decisión del usuario
 
-El usuario elige **A**, **B**, **C**, solicita ajustes o define una fusión. Solo después de una elección expresa se creará la imagen del hero definitivo. La aprobación de ese hero y la autorización para implementar serán una tercera decisión separada.
+El 2026-11-10 el usuario respondió «LA OPcion a». Selección: **A · Golpe**, sin fusión ni modificaciones adicionales indicadas. A partir de esta elección se preparará la imagen del hero definitivo. Su aprobación y la autorización para implementar serán una tercera decisión separada.
