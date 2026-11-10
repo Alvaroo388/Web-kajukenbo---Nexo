@@ -4,7 +4,7 @@ Proyecto frontend de la escuela de Kajukenbo de José Antonio de Mingo en Alover
 
 ## Estado
 
-`EN_CURSO` · Frontend implementado y en revisión. El diseño base quedó confirmado el 2026-11-10, el usuario eligió la opción A de [tres direcciones visuales](docs/ART_DIRECTIONS.md) y aprobó el [hero final corregido](docs/FINAL_HERO.md) con autorización para implementar. Las tres decisiones están registradas en `docs/ART_APPROVALS.json`.
+`APTO PARA ENTREGA DEL FRONTEND` · Implementado, revisado y subido a este repositorio. El diseño base quedó confirmado el 2026-11-10, el usuario eligió la opción A de [tres direcciones visuales](docs/ART_DIRECTIONS.md) y aprobó el [hero final corregido](docs/FINAL_HERO.md) con autorización para implementar. Las tres decisiones están registradas en `docs/ART_APPROVALS.json`.
 
 ## Alcance aprobado
 

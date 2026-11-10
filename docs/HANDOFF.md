@@ -1,6 +1,6 @@
 # Handoff · Kajukenbo de Mingo
 
-Estado: `EN_CURSO` · Checkpoint solicitado por el usuario y actualizado tras implementar. Metodología: Nexo v4.4.1, consultada fuera de este repositorio. Rama `main`; último commit publicado antes de este checkpoint: `e2daf70`.
+Estado: `APTO PARA ENTREGA DEL FRONTEND` · Checkpoint solicitado por el usuario y actualizado tras implementar y subir el código. Metodología: Nexo v4.4.1, consultada fuera de este repositorio. Rama `main`; frontend publicado en el repositorio del proyecto, sin despliegue en hosting.
 
 ## Resumen para reanudar
 
@@ -11,7 +11,7 @@ Estado: `EN_CURSO` · Checkpoint solicitado por el usuario y actualizado tras im
 - Datos confirmados: martes y jueves de 12:00 a 13:00 y de 20:00 a 21:00; 30 € al mes. Dirección, contacto y cronología exacta hasta Alovera pendientes en `docs/INFO_NEGOCIO.md`.
 - Alcance técnico: solo frontend, sin backend ni formulario propio. Perfil `P1_STATIC` en `project.json` y `docs/ARCHITECTURE.md`. DNA, plan de movimiento y código están implementados. No se ha publicado la web en hosting.
 - Pruebas observadas: `nexo_design.py gate` en verde, `npm test` 13 pruebas superadas, `npm run build` correcto y `project.json` validado con `Test-Json -SchemaFile`. Render real comprobado a 320, 390, 801 y 1440 px; sin desbordamiento, texto del hero dentro del campo negro. Clic en KA actualiza ficha y estado; línea de historia avanza al hacer scroll y llega al 100 % tras salto directo al último hito. Fotografía de grupo cargada y revisada. Lighthouse móvil 100/100/100, cero auditorías fallidas. Revisión independiente exhaustiva: apta para entrega del frontend.
-- Siguiente acción exacta: commit y push del frontend. Sigue pendiente aportar escudo Villaseñor, dirección, contacto y relato local; hosting no definido.
+- Siguiente acción exacta cuando el cliente aporte datos: integrar escudo Villaseñor, dirección, contacto y relato local confirmado. Si se decide publicar en hosting, verificar dominio, webroot, HTTPS y funcionamiento de `dist/` en ese entorno.
 
 ## Fuentes propietarias
 
