@@ -1,0 +1,29 @@
+{
+  "$schema": "schemas/project.schema.json",
+  "schema_version": "1.0.0",
+  "methodology_version": "2.0",
+  "document_status": "VIGENTE",
+  "project": { "id": "kajukenbo-de-mingo-alovera", "name": "Kajukenbo de Mingo · Alovera" },
+  "capabilities": {
+    "content": { "multiple_pages": false },
+    "runtime": { "server_side_composition": false },
+    "interaction": { "form_mode": "none", "appointment_request": false, "booking_engine": false },
+    "infrastructure": { "database": false, "functional_sessions": false, "authentication": false, "admin_panel": false, "smtp": false, "scheduled_tasks": false },
+    "advanced": { "customer_accounts": false, "payments": false, "file_uploads": false, "sensitive_data": false, "multiple_locations": false, "multiple_resources": false, "complex_roles": false, "complex_integrations": false, "runtime_ai": false, "voice_assistant": false, "advanced_automation": false }
+  },
+  "environment": { "reference": "docs/ARCHITECTURE.md", "target": "[[PENDIENTE: HOSTING OBJETIVO]]", "webroot": "[[PENDIENTE: WEBROOT DE HOSTING]]", "verified": false, "constraints": ["Solo frontend estático; sin formulario ni servicio de envío."] },
+  "restrictions": [],
+  "document_references": [
+    { "id": "design", "path": "DESIGN.md", "purpose": "Dirección visual aprobada.", "required": true },
+    { "id": "approvals", "path": "docs/ART_APPROVALS.json", "purpose": "Autorizaciones humanas del arte y la implementación.", "required": true },
+    { "id": "business", "path": "docs/INFO_NEGOCIO.md", "purpose": "Hechos y fuentes del contenido.", "required": true },
+    { "id": "architecture", "path": "docs/ARCHITECTURE.md", "purpose": "Capacidades, stack y entorno.", "required": true }
+  ],
+  "pending_items": [
+    { "id": "hosting", "description": "Proveedor, dominio y webroot de publicación.", "blocking": false, "owner": "Cliente", "required_for": "Despliegue" },
+    { "id": "school_address", "description": "Dirección exacta de las clases.", "blocking": false, "owner": "Cliente", "required_for": "Contenido definitivo" },
+    { "id": "public_contact", "description": "Canal de contacto público confirmado.", "blocking": false, "owner": "Cliente", "required_for": "Contenido definitivo" },
+    { "id": "local_history", "description": "Fecha y relato verificable de llegada a Alovera y relación con Villaseñor.", "blocking": false, "owner": "Cliente", "required_for": "Historia definitiva" },
+    { "id": "villasenor_shield", "description": "Archivo y autorización del escudo Villaseñor.", "blocking": false, "owner": "Cliente", "required_for": "Identidad completa" }
+  ]
+}

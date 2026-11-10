@@ -1,0 +1,627 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nexolocal:schema:project:1.0.0",
+  "title": "NexoLocal Studio project contract",
+  "description": "Editable project.json contract for NexoLocal Studio methodology v2. The technical profile is derived outside this document.",
+  "schema_version": "1.0.0",
+  "methodology_version": "2.0",
+  "document_status": "VIGENTE",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "methodology_version",
+    "document_status",
+    "project",
+    "capabilities",
+    "environment",
+    "restrictions",
+    "document_references",
+    "pending_items"
+  ],
+  "properties": {
+    "$schema": {
+      "$ref": "#/$defs/schemaReference"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "description": "Version of the editable project contract."
+    },
+    "methodology_version": {
+      "const": "2.0",
+      "description": "NexoLocal Studio methodology version."
+    },
+    "document_status": {
+      "$ref": "#/$defs/documentStatus"
+    },
+    "example": {
+      "$ref": "#/$defs/exampleMetadata"
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
+          "description": "Stable technical project identifier in kebab-case."
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyOrPendingString"
+        }
+      }
+    },
+    "capabilities": {
+      "$ref": "#/$defs/capabilities"
+    },
+    "environment": {
+      "$ref": "#/$defs/environment"
+    },
+    "restrictions": {
+      "type": "array",
+      "description": "Project restrictions. Entries restrict scope and never grant authorization.",
+      "items": {
+        "$ref": "#/$defs/restriction"
+      },
+      "uniqueItems": true
+    },
+    "document_references": {
+      "type": "array",
+      "description": "Repository documents that define or constrain the project.",
+      "items": {
+        "$ref": "#/$defs/documentReference"
+      },
+      "minItems": 1
+    },
+    "pending_items": {
+      "type": "array",
+      "description": "Unknown data and decisions that remain visible until resolved.",
+      "items": {
+        "$ref": "#/$defs/pendingItem"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "capabilities": {
+            "properties": {
+              "interaction": {
+                "properties": {
+                  "appointment_request": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "appointment_request"
+                ]
+              }
+            },
+            "required": [
+              "interaction"
+            ]
+          }
+        },
+        "required": [
+          "capabilities"
+        ]
+      },
+      "then": {
+        "properties": {
+          "capabilities": {
+            "properties": {
+              "interaction": {
+                "properties": {
+                  "form_mode": {
+                    "const": "php"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "capabilities": {
+            "properties": {
+              "infrastructure": {
+                "properties": {
+                  "authentication": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "authentication"
+                ]
+              }
+            },
+            "required": [
+              "infrastructure"
+            ]
+          }
+        },
+        "required": [
+          "capabilities"
+        ]
+      },
+      "then": {
+        "properties": {
+          "capabilities": {
+            "properties": {
+              "infrastructure": {
+                "properties": {
+                  "database": {
+                    "const": true
+                  },
+                  "functional_sessions": {
+                    "const": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "capabilities": {
+            "properties": {
+              "infrastructure": {
+                "properties": {
+                  "admin_panel": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "admin_panel"
+                ]
+              }
+            },
+            "required": [
+              "infrastructure"
+            ]
+          }
+        },
+        "required": [
+          "capabilities"
+        ]
+      },
+      "then": {
+        "properties": {
+          "capabilities": {
+            "properties": {
+              "infrastructure": {
+                "properties": {
+                  "database": {
+                    "const": true
+                  },
+                  "functional_sessions": {
+                    "const": true
+                  },
+                  "authentication": {
+                    "const": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "capabilities": {
+            "properties": {
+              "interaction": {
+                "properties": {
+                  "booking_engine": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "booking_engine"
+                ]
+              }
+            },
+            "required": [
+              "interaction"
+            ]
+          }
+        },
+        "required": [
+          "capabilities"
+        ]
+      },
+      "then": {
+        "properties": {
+          "capabilities": {
+            "properties": {
+              "infrastructure": {
+                "properties": {
+                  "database": {
+                    "const": true
+                  },
+                  "functional_sessions": {
+                    "const": true
+                  },
+                  "authentication": {
+                    "const": true
+                  },
+                  "admin_panel": {
+                    "const": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "documentStatus": {
+      "type": "string",
+      "enum": [
+        "BORRADOR",
+        "EN_REVISION",
+        "APROBADO",
+        "VIGENTE",
+        "SUSTITUIDO",
+        "OBSOLETO",
+        "ARCHIVADO"
+      ],
+      "description": "Document status from docs/agent/methodology/STATUS_MODEL.md."
+    },
+    "pendingString": {
+      "type": "string",
+      "pattern": "^\\[\\[PENDIENTE: [^\\]\\r\\n]+\\]\\]$"
+    },
+    "schemaReference": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^(?![A-Za-z][A-Za-z0-9+.-]*:)(?!/)(?!.*\\\\)(?!.*//)(?!.*(?:^|/)\\.(?:/|$))(?!.*[\\u0000-\\u001F\\u007F*?\\[\\]{}])(?:\\.\\./)*[A-Za-z0-9_.-]{1,255}(?:/[A-Za-z0-9_.-]{1,255})*$",
+      "description": "Normalized relative URI reference resolved from the instance location. Leading ../ segments are permitted only when canonical resolution remains inside the repository; containment and expected $id require semantic validation."
+    },
+    "nonEmptyOrPendingString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repositoryPath": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^(?!.{513,}$)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*(?:^|/)(?:[Cc][Oo][Nn]|[Pp][Rr][Nn]|[Aa][Uu][Xx]|[Nn][Uu][Ll]|[Cc][Oo][Mm][1-9]|[Ll][Pp][Tt][1-9])(?:\\.[^/]+)?(?:/|$))[A-Za-z0-9_.-]{1,255}(?:/[A-Za-z0-9_.-]{1,255})*$",
+      "description": "Normalized repository-relative path of at most 512 characters. Segments use ASCII letters, digits, dot, underscore or hyphen and `/` is the only separator. Schema validation cannot resolve symlinks, filesystem case rules, aliases or canonical containment inside the repository root."
+    },
+    "exampleMetadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "non_binding",
+        "fictitious_data",
+        "laboratory",
+        "implementation_exists"
+      ],
+      "properties": {
+        "non_binding": {
+          "const": true
+        },
+        "fictitious_data": {
+          "const": true
+        },
+        "laboratory": {
+          "type": "boolean"
+        },
+        "implementation_exists": {
+          "const": false
+        }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "content",
+        "runtime",
+        "interaction",
+        "infrastructure",
+        "advanced"
+      ],
+      "properties": {
+        "content": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "multiple_pages"
+          ],
+          "properties": {
+            "multiple_pages": {
+              "type": "boolean"
+            }
+          }
+        },
+        "runtime": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "server_side_composition"
+          ],
+          "properties": {
+            "server_side_composition": {
+              "type": "boolean"
+            }
+          }
+        },
+        "interaction": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "form_mode",
+            "appointment_request",
+            "booking_engine"
+          ],
+          "properties": {
+            "form_mode": {
+              "type": "string",
+              "enum": [
+                "none",
+                "external",
+                "php"
+              ]
+            },
+            "appointment_request": {
+              "type": "boolean"
+            },
+            "booking_engine": {
+              "type": "boolean",
+              "description": "Real availability calculation and booking confirmation."
+            }
+          }
+        },
+        "infrastructure": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "database",
+            "functional_sessions",
+            "authentication",
+            "admin_panel",
+            "smtp",
+            "scheduled_tasks"
+          ],
+          "properties": {
+            "database": {
+              "type": "boolean",
+              "description": "Structured persistence in a database."
+            },
+            "functional_sessions": {
+              "type": "boolean"
+            },
+            "authentication": {
+              "type": "boolean"
+            },
+            "admin_panel": {
+              "type": "boolean"
+            },
+            "smtp": {
+              "type": "boolean"
+            },
+            "scheduled_tasks": {
+              "type": "boolean"
+            }
+          }
+        },
+        "advanced": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "customer_accounts",
+            "payments",
+            "file_uploads",
+            "sensitive_data",
+            "multiple_locations",
+            "multiple_resources",
+            "complex_roles",
+            "complex_integrations",
+            "runtime_ai",
+            "voice_assistant",
+            "advanced_automation"
+          ],
+          "properties": {
+            "customer_accounts": {
+              "type": "boolean"
+            },
+            "payments": {
+              "type": "boolean"
+            },
+            "file_uploads": {
+              "type": "boolean"
+            },
+            "sensitive_data": {
+              "type": "boolean"
+            },
+            "multiple_locations": {
+              "type": "boolean"
+            },
+            "multiple_resources": {
+              "type": "boolean"
+            },
+            "complex_roles": {
+              "type": "boolean"
+            },
+            "complex_integrations": {
+              "type": "boolean"
+            },
+            "runtime_ai": {
+              "type": "boolean"
+            },
+            "voice_assistant": {
+              "type": "boolean"
+            },
+            "advanced_automation": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reference",
+        "target",
+        "webroot",
+        "verified",
+        "constraints"
+      ],
+      "properties": {
+        "reference": {
+          "$ref": "#/$defs/repositoryPath"
+        },
+        "target": {
+          "$ref": "#/$defs/nonEmptyOrPendingString"
+        },
+        "webroot": {
+          "$ref": "#/$defs/nonEmptyOrPendingString"
+        },
+        "verified": {
+          "type": "boolean"
+        },
+        "verified_at": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "verification_method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "verified": {
+                "const": true
+              }
+            },
+            "required": [
+              "verified"
+            ]
+          },
+          "then": {
+            "required": [
+              "verified_at",
+              "verification_method"
+            ]
+          }
+        }
+      ]
+    },
+    "restriction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "description",
+        "source",
+        "blocking"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "$ref": "#/$defs/repositoryPath"
+        },
+        "blocking": {
+          "type": "boolean"
+        }
+      }
+    },
+    "documentReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "path",
+        "purpose",
+        "required"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$"
+        },
+        "path": {
+          "$ref": "#/$defs/repositoryPath"
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "pendingItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "description",
+        "blocking",
+        "owner",
+        "required_for"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "blocking": {
+          "type": "boolean"
+        },
+        "owner": {
+          "$ref": "#/$defs/nonEmptyOrPendingString"
+        },
+        "required_for": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

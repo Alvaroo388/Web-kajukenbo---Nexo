@@ -4,14 +4,14 @@ Proyecto frontend de la escuela de Kajukenbo de José Antonio de Mingo en Alover
 
 ## Estado
 
-`EN_CURSO` · Preparación artística. El diseño base quedó confirmado el 2026-11-10 y el usuario eligió la opción A de [tres direcciones visuales](docs/ART_DIRECTIONS.md). Está preparado el [hero final propuesto](docs/FINAL_HERO.md); faltan su aprobación expresa y la autorización de implementación en `docs/ART_APPROVALS.json`.
+`EN_CURSO` · Frontend implementado y en revisión. El diseño base quedó confirmado el 2026-11-10, el usuario eligió la opción A de [tres direcciones visuales](docs/ART_DIRECTIONS.md) y aprobó el [hero final corregido](docs/FINAL_HERO.md) con autorización para implementar. Las tres decisiones están registradas en `docs/ART_APPROVALS.json`.
 
 ## Alcance aprobado
 
 - Web informativa, solo frontend y en español.
 - Inicio con desglose interactivo de KA · JU · KEN · BO.
 - Historia con un flujo animado desde el origen del arte hasta Alovera, dejando pendientes los hitos locales no verificados.
-- Escudos de De Mingo y Villaseñor e imágenes reales de la escuela cuando se disponga de archivos y derechos de uso.
+- Escudo de De Mingo e imágenes reales de la escuela; reserva visible para el escudo de Villaseñor, aún no aportado.
 - Paleta negra y roja, blanco y un acento destacado; estética marcial oriental sin inventar elementos históricos.
 - Subir avances a este repositorio de GitHub. No se incorpora la documentación del repositorio de metodología.
 
@@ -22,6 +22,8 @@ Proyecto frontend de la escuela de Kajukenbo de José Antonio de Mingo en Alover
 - [Registro de aprobaciones](docs/ART_APPROVALS.json)
 - [Recursos y derechos](docs/ASSETS.md)
 
-## Comprobación actual
+## Desarrollo local
 
-`npm test` comprueba la estructura del proyecto y que las decisiones artísticas no se marquen como aprobadas por adelantado. El stack y el comando `build` se decidirán después del tercer visto bueno.
+Requiere Node.js 20 o superior. `npm run dev` abre una vista local en `http://127.0.0.1:4173`. `npm test` comprueba los datos e invariantes relevantes; `npm run build` crea la salida estática en `dist/`. El hosting y dominio de producción están pendientes. No se copió la documentación de Nexo; solo se incluyó el esquema JSON necesario para validar `project.json`.
+
+La arquitectura está en [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). El expediente visual está en [DESIGN.md](DESIGN.md), [DESIGN_DNA.json](DESIGN_DNA.json) y [docs/MOTION_PLAN.md](docs/MOTION_PLAN.md).

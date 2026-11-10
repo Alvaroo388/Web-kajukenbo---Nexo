@@ -1,10 +1,11 @@
 # Hero definitivo propuesto · dirección A «Golpe»
 
-Estado: `EN_REVISIÓN` · Pausa 3 de Nexo. Imagen: [`docs/art/hero-final.png`](art/hero-final.png). La opción A fue elegida expresamente por el usuario el 2026-11-10. Esta imagen fija la intención visual; las interacciones descritas todavía no están implementadas.
+Estado: `APROBADO` · Pausa 3 de Nexo. Imagen: [`docs/art/hero-final.png`](art/hero-final.png). La opción A fue elegida expresamente por el usuario el 2026-11-10. El usuario aprobó el hero y autorizó la implementación con la condición de mantener todo el texto en el bloque negro, compacto y sin cortes. La imagen se corrigió y revisó visualmente antes de registrar esta aprobación. La interacción se implementó después en `public/`.
 
 ## Composición aprobable
 
 - Negro mate como campo de lectura; banda roja a la izquierda y corte diagonal entre el nombre y la fotografía real `maestro.jpg`.
+- Todo el texto informativo y de navegación del hero permanece dentro del campo negro con margen respecto al corte rojo. La banda roja lleva solo el escudo como imagen y el carácter `拳` como signo decorativo; la fotografía no lleva texto superpuesto.
 - El escudo de De Mingo aparece intacto en la cabecera. El de Villaseñor conserva una reserva visible hasta que se aporte el archivo autorizado.
 - `拳` («puño») ocupa la banda roja como signo visual relacionado con la raíz de boxeo. No pretende traducir «Kajukenbo» ni representar una inscripción histórica de la escuela.
 - El título KAJUKENBO se parte visualmente en dos líneas, **KAJU / KENBO**, pero sus cuatro sílabas **KA · JU · KEN · BO** serán controles independientes para ratón, teclado y toque.
@@ -30,6 +31,6 @@ Estado: `EN_REVISIÓN` · Pausa 3 de Nexo. Imagen: [`docs/art/hero-final.png`](a
 
 ## Límite de esta decisión
 
-La imagen no es una prueba funcional ni una aprobación de implementación. La tipografía condensada de la maqueta sirve como referencia de forma; antes del frontend se elegirá una fuente utilizable en web con procedencia y licencia registradas. La foto `maestro.jpg` tiene resolución limitada y su escala final se ajustará tras revisión en dispositivos.
+La imagen no es una prueba funcional. La tipografía condensada de la maqueta sirve como referencia de forma; antes del frontend se elegirá una fuente utilizable en web con procedencia y licencia registradas. La foto `maestro.jpg` tiene resolución limitada y su escala final se ajustará tras revisión en dispositivos.
 
-**Pausa 3 pendiente:** aprobación expresa de esta imagen final **y** autorización expresa para empezar a implementar el frontend. Solo entonces se completarán `DESIGN_DNA.json`, `DESIGN.md`, el plan de movimiento y el stack.
+**Pausa 3 cumplida:** el usuario respondió «si, pero asegurate que al hacer el hero el texto este todo en el la misma parte, con el fondo negro en este caso, que no se corte, compacta antes de continuar». La imagen corregida cumple esa condición y se registra en `docs/ART_APPROVALS.json`. Procede completar `DESIGN_DNA.json`, `DESIGN.md`, el plan de movimiento y el stack antes del frontend.

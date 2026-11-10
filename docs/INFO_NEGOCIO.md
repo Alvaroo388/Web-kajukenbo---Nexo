@@ -7,7 +7,7 @@ Estado: `BORRADOR`. Investigación inicial realizada el 2026-11-10 para esta web
 | Dato | Estado | Fuente |
 |---|---|---|
 | Web de la escuela de artes marciales Kajukenbo de Mingo en Alovera | Aportado | Encargo del 2026-11-10 |
-| Se desea mostrar el escudo de De Mingo y el de Villaseñor y fotos de la escuela | Aportado como requisito; archivos pendientes | Encargo del 2026-11-10 |
+| Se desea mostrar el escudo de De Mingo y el de Villaseñor y fotos de la escuela | Escudo De Mingo y fotos recibidos; escudo Villaseñor pendiente | Encargo del 2026-11-10 y archivos inspeccionados |
 | Colores negro, rojo y blanco con un acento destacado | Aportado | Encargo del 2026-11-10 |
 | Clases martes y jueves, 12:00–13:00 y 20:00–21:00 | Confirmado por el usuario | Mensaje de aclaración del 2026-11-10 |
 | Cuota indicada: 30 € al mes | Aportado; aplicación a grupos concretos pendiente | Mensaje del 2026-11-10 |

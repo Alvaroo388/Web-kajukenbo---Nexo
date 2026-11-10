@@ -30,3 +30,6 @@ jobs:
 
       - name: Smoke tests
         run: npm test
+
+      - name: Build estático
+        run: npm run build

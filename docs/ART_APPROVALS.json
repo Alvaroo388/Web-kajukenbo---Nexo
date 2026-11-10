@@ -19,13 +19,13 @@
     "artifact_sha256": "df7fbde5ff2255ac8bc042464a758f73bf128d12adbba723e3c0e4156d7cdc8c"
   },
   "final_hero": {
-    "approved": false,
-    "approved_by": null,
-    "approved_at": null,
-    "evidence": null,
-    "artifact_path": null,
-    "artifact_sha256": null,
-    "authorizes_implementation": false
+    "approved": true,
+    "approved_by": "usuario del proyecto",
+    "approved_at": "2026-11-10T23:32:04+01:00",
+    "evidence": "El usuario respondió «si, pero asegurate que al hacer el hero el texto este todo en el la misma parte, con el fondo negro en este caso, que no se corte, compacta antes de continuar». Se corrigió la imagen para mantener todo el texto informativo dentro del campo negro y se revisó visualmente.",
+    "artifact_path": "docs/art/hero-final.png",
+    "artifact_sha256": "5873ba18473947c99a77cccd25a257d83fba48aa606091c1939553d5bec9b6a6",
+    "authorizes_implementation": true
   }
 }
 
