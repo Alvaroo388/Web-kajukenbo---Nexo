@@ -9,6 +9,9 @@ Estado: `BORRADOR`. Investigación inicial realizada el 2026-11-10 para esta web
 | Web de la escuela de artes marciales Kajukenbo de Mingo en Alovera | Aportado | Encargo del 2026-11-10 |
 | Se desea mostrar el escudo de De Mingo y el de Villaseñor y fotos de la escuela | Aportado como requisito; archivos pendientes | Encargo del 2026-11-10 |
 | Colores negro, rojo y blanco con un acento destacado | Aportado | Encargo del 2026-11-10 |
+| Clases martes y jueves, 12:00–13:00 y 20:00–21:00 | Confirmado por el usuario | Mensaje de aclaración del 2026-11-10 |
+| Cuota indicada: 30 € al mes | Aportado; aplicación a grupos concretos pendiente | Mensaje del 2026-11-10 |
+| Archivos `images.jpg`, `maestro.jpg` y `medallas.jpg` colocados en el proyecto | Aportado | Mensaje del 2026-11-10 e inspección local de archivos. `images.jpg` coincide visualmente con el escudo De Mingo adjunto. |
 
 ## Verificado en fuentes públicas
 
@@ -24,9 +27,9 @@ Estado: `BORRADOR`. Investigación inicial realizada el 2026-11-10 para esta web
 
 - `[[PENDIENTE: FECHA Y RELATO DE LA LLEGADA A ALOVERA]]`
 - `[[PENDIENTE: CRONOLOGÍA Y RELACIÓN EXACTA ENTRE VILLASEÑOR Y DE MINGO]]`
-- `[[PENDIENTE: DIRECCIÓN Y HORARIOS ACTUALES]]`
-- `[[PENDIENTE: GRUPOS, EDADES Y TARIFAS]]`
+- `[[PENDIENTE: DIRECCIÓN EXACTA DE LAS CLASES]]`
+- `[[PENDIENTE: GRUPOS, EDADES Y APLICACIÓN DE LA CUOTA DE 30 €/MES]]`
 - `[[PENDIENTE: CONTACTO PÚBLICO CONFIRMADO]]`
-- `[[PENDIENTE: ESCUDOS OFICIALES Y FOTOGRAFÍAS CON PERMISO]]`
+- `[[PENDIENTE: ESCUDO VILLASEÑOR]]`
 
 No se trasladan a la web datos personales de alumnos, testimonios, cifras ni resultados deportivos sin autorización y fuente específica.

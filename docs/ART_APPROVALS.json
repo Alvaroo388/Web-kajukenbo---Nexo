@@ -3,12 +3,12 @@
   "schema_version": 2,
   "project_id": "kajukenbo-de-mingo-alovera",
   "base_design": {
-    "approved": false,
-    "approved_by": null,
-    "approved_at": null,
-    "evidence": null,
+    "approved": true,
+    "approved_by": "usuario del proyecto",
+    "approved_at": "2026-11-10T22:22:58+01:00",
+    "evidence": "Respuesta expresa en este chat el 2026-11-10: «Confirmo el diseño base» a la pregunta sobre docs/DESIGN_BASE.md.",
     "artifact_path": "docs/DESIGN_BASE.md",
-    "artifact_sha256": null
+    "artifact_sha256": "41b35687d08ebe8d4bac90efa91e3a14d5fb0e3d5056e5bfe0959c65c09d5b83"
   },
   "hero_selection": {
     "approved": false,
